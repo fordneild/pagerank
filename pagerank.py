@@ -1,13 +1,6 @@
 import numpy as np
 
-#start with simple example of 4 pages
-p1 = [0, 1, 1, 1]
-p2 = [1, 0, 1, 1]
-p3 = [1, 1, 0, 1]
-p4 = [1, 1, 1, 0]
-
-P = [p1,p2, p3, p4]
-
+#copied from prebuilt function
 def pagerank(G, alpha=0.85, personalization=None, 
 			max_iter=100, tol=1.0e-6, nstart=None, weight='weight', 
 			dangling=None): 
@@ -137,8 +130,5 @@ def pagerank(G, alpha=0.85, personalization=None,
 			return x 
 	raise NetworkXError('pagerank: power iteration failed to converge '
 						'in %d iterations.' % max_iter) 
-
-
-print(np.toarray(P))
 
 
